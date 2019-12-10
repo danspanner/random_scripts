@@ -1,0 +1,8 @@
+default vesamenu.c32
+
+label autoinstall
+menu label ^Install Ubuntu
+menu default
+timeout 3
+kernel ubuntu1804/linux
+append auto=true priority=critical netfcg/get_hostname=ubuntu1804  preseed/url=http://10.0.0.1/preseed.cfg initrd=ubuntu1804/initrd.gz toram ---
